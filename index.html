@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
+  
+    <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+    <main class="wrappers__main"> 
+        <header class="wrappers__title"> 
+            <h1 class="title__text">Contact Us</h1>
+        </header>
+
+        <form class="wrappers__form"> 
+            <fieldset class="wrappers__field">
+                <legend class="access__hidden">Formulary Contact Us for a Message</legend>
+                <section class="wrappers__names"> 
+                    <section class="names__name"> 
+                        <label for="first" class="name__title" aria-label="First Name">First Name <span class="requireds">*</span></label>
+                        <input type="text" name="first" id="first" class="name__input" required aria-required="true"i autocomplete="given-name">
+                        <span class="field__error display__none">This field is required</span>
+                    </section>
+                    <section class="names__name"> 
+                        <label for="last" class="name__title" aria-label="Last name">Last Name <span class="requireds">*</span></label>
+                        <input type="text" name="first" id="first" class="name__input" required aria-required="true" autocomplete="family-name">
+                        <span class="field__error display__none">This field is required</span>
+                    </section>
+                </section>
+                <section class="wrappers__mail"> 
+                    <label for="mail" class="mail__title">Email Address <span class="requireds">*</span></label>
+                    <input type="email" name="mail"  class="mail__name" required aria-required="true">
+                    <span class="field__error display__none">Please enter a valid email address</span>
+                </section>
+                <section class="wrappers__querys"> 
+                    <h2 class="querys__header">Query Type <span class="requireds">*</span></h2>
+                    <section class="querys__types"> 
+                        <section class="types__items"> 
+                            <label for="enquiry" class="querys__title">
+                                <input type="radio" id="enquiry" name="enquiry"  class="querys__inputs">
+                               <span class="querys__icons"></span>
+                               <span class="querys__text">General Enquiry</span>     
+                                
+                            </label>
+                        </section>    
+                        <section class="types__items"> 
+                            <label for="request" class="querys__title ">
+                                <input type="radio" id="request" name="enquiry"  class="querys__inputs">
+                               <span class="querys__icons"></span>
+                               <span class="querys__text">Support Request</span>     
+                            </label>
+                        </section>
+                    </section>
+                    <span class="field__error display__none">Please select a query type</span>
+                </section>
+                <section class="wrappers__message"> 
+                    <h2 class="message__title">Message <span class="requireds">*</span></h2>
+                    <textarea class="message__text" rows="8" cols="33"></textarea>
+                    <span class="field__error display__none">This field is required</span>
+                </section>
+            </fieldset>
+            <section class="wrappers__consent"> 
+                <input type="checkbox" id="consent" name="consent" class="consent__check">
+                <label for="consent" class="consent__title">
+                    <span class="consent__icon"></span>
+                    <span class="consent__text">
+                        I consent to being contacted by the team 
+                        <span class="requireds">*</span>
+                    </span>        
+                </label>
+            </section>
+            <section class="wrappers__button"> 
+                <button type="submit" class="button__submit">Submit</button>
+            </section>
+        </form>
+        <section class="message__success display__none"> 
+            <section class="message__head"> 
+                <img class="head__img" src="./assets/images/icon-success-check.svg" alt=""> 
+                <h2 class="head__text">Message Sent!</h2> 
+            </section>
+            <p class="message__subtitle"> 
+               Thanks for completing the form. We'll be in touch soon! 
+            </p>
+        </section>    
+    </main>
+
+  <!-- Message Sent! -->
+</body>
+</html>
+
+
+

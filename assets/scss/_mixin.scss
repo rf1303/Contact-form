@@ -1,0 +1,82 @@
+@use './variables' as *;
+
+@mixin flexBox( $direction : row , $jc : start, $ai : start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}  
+
+@mixin tgSize($size : 1.6rem, $weight : 300 ) {
+  font-family: karla;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin bgColorIcon($bgsize, $background) {
+  width: $bgsize;
+  height: $bgsize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  border-radius: .3rem;
+}
+
+@mixin iconItem ($iconsize){
+  width: $iconsize;
+  height: $iconsize;
+  margin-inline: auto;
+}
+
+@mixin buttonItem ($backgroundItem : $blue-850-color){
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2rem;
+  align-items: center;   
+  gap: 1rem;
+  width: 100%;
+  background-color: $backgroundItem;
+  border-radius: .75rem;
+  box-shadow: .7px .7px 8px 1px rgba(0, 0, 0, .1);
+  padding: 1rem; 
+  outline: none;
+  .item__radio {
+    @include bgColorIcon($space-500, $grey-50-color);
+    text-align: center;
+  }
+  &:hover {
+    outline: 3px solid $purple-600-color;
+    .item__radio {
+      background-color: $purple-600-color;
+    }
+    .item__letter {
+      color: $white-color;
+    }
+  }
+  &:focus {
+    outline: 3px solid $purple-600-color;
+    .item__radio {
+      background-color: $purple-600-color;
+    }
+    .item__letter {
+      color: $white-color;
+    }
+  }
+} 
+
+@mixin itemCheck ($colors) {
+  outline: 3px solid $colors;
+  .item__radio {
+      background-color: $colors;
+   }
+  .item__letter {
+    color: $white-color;
+  }
+}
+
+@mixin itemIcon {
+  width: $space-300;
+  height: $space-300;
+  background-image: url('../images/icon-correct.svg');
+  background-size: contain;
+}
