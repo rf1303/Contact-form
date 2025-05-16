@@ -75,6 +75,9 @@ form, input, select, textarea, button, label {
   font-size: inherit;
   color: inherit;
   border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: none;
 }
 
 @font-face {
@@ -149,7 +152,7 @@ body {
 .name__input,
 .mail__name {
   width: 100%;
-  border: 1px solid #86a2a5;
+  outline: 1px solid #86a2a5;
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
   margin-top: 0.5rem;
@@ -157,7 +160,8 @@ body {
 .name__input:hover, .name__input:focus,
 .mail__name:hover,
 .mail__name:focus {
-  border: 1px solid #0c7d69;
+  outline: 2px solid #0c7d69;
+  box-shadow: 0.5px 1px 3px rgba(134, 162, 165, 0.8), -0.5px -1px 3px rgba(134, 162, 165, 0.8);
   cursor: pointer;
 }
 
@@ -181,10 +185,15 @@ body {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
 }
+.types__items:hover, .types__items:focus {
+  outline: 2px solid #0c7d69;
+  box-shadow: 1px 1px 3px 1px rgba(42, 65, 68, 0.8), -1px -1px 3px rgba(42, 65, 68, 0.8);
+  cursor: pointer;
+}
 
 .types__items--checked {
   background-color: #e0f1e8;
-  border: 1px solid #0c7d69;
+  outline: 2px solid #0c7d69;
 }
 
 .querys__title {
@@ -199,9 +208,9 @@ body {
 
 .querys__icons {
   position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid #86a2a5;
+  width: 1.25rem;
+  height: 1.25rem;
+  outline: 1px solid #86a2a5;
   border-radius: 70%;
   box-shadow: 0.5px 1px 3px rgba(134, 162, 165, 0.8) inset, -0.5px -1px 3px rgba(134, 162, 165, 0.8) inset;
   transition: background-image 0.7s ease-in-out;
@@ -213,7 +222,7 @@ body {
   align-items: center;
   content: "";
   position: absolute;
-  top: -0.9px;
+  top: -1.3px;
   left: -0.6px;
   width: 1.5rem;
   height: 1.5rem;
@@ -235,7 +244,8 @@ body {
   border-radius: 0.5rem;
 }
 .message__text:hover, .message__text:focus {
-  border: 1px solid #0c7d69;
+  outline: 2px solid #0c7d69;
+  box-shadow: 1px 1px 3px 1px rgba(42, 65, 68, 0.8), -1px -1px 3px rgba(42, 65, 68, 0.8);
   cursor: pointer;
 }
 
@@ -294,15 +304,18 @@ body {
   text-transform: capitalize;
   background-color: #0c7d69;
   border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px 1px rgba(42, 65, 68, 0.5), -1px -1px 5px rgba(42, 65, 68, 0.5);
   padding-block: 1rem;
 }
 .button__submit:hover, .button__submit:focus {
   background-color: #2a4144;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4) inset, -1px -1px 2px rgba(255, 255, 255, 0.4) inset;
   cursor: pointer;
 }
 
 .inputs__error {
-  border: 1px solid #d73c3c;
+  outline: 2px solid #d73c3c;
+  box-shadow: 1px 1px 3px 1px rgba(49, 3, 1, 0.8), -1px -1px 3px rgba(49, 3, 1, 0.8);
 }
 
 .message__success {

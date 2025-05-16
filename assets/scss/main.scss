@@ -70,18 +70,17 @@ body {
 .name__input,
 .mail__name {
   width: 100%;
-  border: 1px solid $grey-500-color;
+  outline: 1px solid $grey-500-color;
   border-radius: .5rem;
   padding: $space-150 $space-300;
   margin-top: .5rem;
   &:hover,
   &:focus {
-    border: 1px solid $green-600-color;
+    outline: 2px solid $green-600-color;
+    box-shadow: .5px 1px 3px  rgba(#86a2a5, .8) , -.5px -1px 3px  rgba(#86a2a5, .8);  
     cursor: pointer;
   }
 }
-
-
 
 .wrappers__querys {
   display: grid;
@@ -102,11 +101,17 @@ body {
   border-radius: .5rem;
   padding: $space-150 $space-300;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    outline: 2px solid $green-600-color;
+    box-shadow: 1px 1px 3px 1px rgba(#2a4144, .8), -1px -1px 3px rgba($color: #2a4144,$alpha: .8);
+    cursor: pointer;
+  }
 }
 
 .types__items--checked {
   background-color: $green-200-color;
-  border: 1px solid $green-600-color;
+  outline: 2px solid $green-600-color;
 }
 
 .querys__title {
@@ -119,9 +124,9 @@ body {
 
 .querys__icons {
   position: relative;
-  width: $space-300;
-  height: $space-300;
-  border:  1px solid $grey-500-color;
+  width: $space-275;
+  height: $space-275;
+  outline:  1px solid $grey-500-color;
   border-radius: 70%;
   box-shadow: .5px 1px 3px  rgba(#86a2a5, .8) inset, -.5px -1px 3px  rgba(#86a2a5, .8) inset;  
   transition: background-image .7s ease-in-out;
@@ -133,7 +138,7 @@ body {
   align-items: center;  
   content: '';
   position: absolute;
-  top: -0.9px;
+  top: -1.3px;
   left: -0.6px;
   width: $space-300;
   height: $space-300;
@@ -155,7 +160,8 @@ body {
   border-radius: .5rem;
   &:hover,
   &:focus {
-    border: 1px solid $green-600-color;
+    outline: 2px solid $green-600-color;
+    box-shadow: 1px 1px 3px 1px rgba(#2a4144, .8), -1px -1px 3px rgba($color: #2a4144,$alpha: .8);
     cursor: pointer;
   }
 }
@@ -211,16 +217,19 @@ body {
   text-transform: capitalize;
   background-color: $green-600-color;
   border-radius: $space-100;
+  box-shadow: 1px 1px 5px 1px rgba(#2a4144, .5), -1px -1px 5px rgba($color: #2a4144,$alpha: .5);
   padding-block: $space-200;
   &:hover,
   &:focus {
     background-color: $grey-900-color;
+    box-shadow: 1px 1px 2px  rgba(#fff, .4) inset, -1px -1px 2px  rgba(#fff, .4) inset;  
     cursor: pointer;
   }
 }
 
 .inputs__error {
-  border: 1px solid $red-error-color;
+  outline: 2px solid $red-error-color;
+  box-shadow: 1px 1px 3px 1px rgba(#310301, .8), -1px -1px 3px rgba($color: #310301,$alpha: .8);
 }
 
 .message__success {
