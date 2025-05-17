@@ -93,7 +93,11 @@ body {
 }
 
 .querys__inputs {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  opacity: 1;
+  width: 5px;
+  height: 5px; 
 }
 
 .types__items {
