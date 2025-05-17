@@ -173,8 +173,10 @@ body {
 .consent__check {
   position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
+  border: none !important;
+  outline: none !important;
 }
 .wrappers__consent {
   display: grid;
@@ -242,8 +244,9 @@ body {
 }
 
 .inputs__error {
-  outline: 2px solid $red-error-color;
+  outline: 1.5px solid $red-error-color;
   box-shadow: 1px 1px 3px 1px rgba(#310301, .8), -1px -1px 3px rgba($color: #310301,$alpha: .8);
+  transition: all .9s ease-in-out;
 }
 
 .message__success {
@@ -313,6 +316,28 @@ body {
     width: min(46rem, 100%);
   }
 }
+
+.message__success,
+.field__error{
+  transition: opacity 1s ease;
+  opacity: 0;
+
+  &:where(:not(.display__none)) {
+    display: allow-discrete block; 
+    opacity: 1;
+    @starting-style {
+      opacity: 0;
+    }
+  }
+  
+  &:where(.display__none) {
+    display: allow-discrete none;
+    @ending-style {
+      opacity: 0;
+    }
+  }
+}
+
 
 
 

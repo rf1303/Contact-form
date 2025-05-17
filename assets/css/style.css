@@ -256,8 +256,10 @@ body {
 .consent__check {
   position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
+  border: none !important;
+  outline: none !important;
 }
 
 .wrappers__consent {
@@ -327,8 +329,9 @@ body {
 }
 
 .inputs__error {
-  outline: 2px solid #d73c3c;
+  outline: 1.5px solid #d73c3c;
   box-shadow: 1px 1px 3px 1px rgba(49, 3, 1, 0.8), -1px -1px 3px rgba(49, 3, 1, 0.8);
+  transition: all 0.9s ease-in-out;
 }
 
 .message__success {
@@ -400,6 +403,32 @@ body {
 @media (min-width: 81em) {
   .wrappers__main {
     width: min(46rem, 100%);
+  }
+}
+.message__success,
+.field__error {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+.message__success:where(:not(.display__none)),
+.field__error:where(:not(.display__none)) {
+  display: allow-discrete block;
+  opacity: 1;
+}
+@starting-style {
+  .message__success:where(:not(.display__none)),
+  .field__error:where(:not(.display__none)) {
+    opacity: 0;
+  }
+}
+.message__success:where(.display__none),
+.field__error:where(.display__none) {
+  display: allow-discrete none;
+}
+@ending-style {
+  .message__success:where(.display__none),
+  .field__error:where(.display__none) {
+    opacity: 0;
   }
 }
 
