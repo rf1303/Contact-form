@@ -50,6 +50,7 @@ export function wrappersSubmit(formValid) {
 
         if (!consentCheck.checked) {
             consent.focus();
+            messageError(consent, 5);
             formValid = false;
 
            const consentIcon = document.querySelector('.consent__icon');
@@ -57,6 +58,9 @@ export function wrappersSubmit(formValid) {
             setTimeout(() => {
                 consentIcon.style.animation = '';
             }, 3000); 
-        }
+        } else {
+            messageOk(consent, 5);
+    }
+
     return  formValid; 
 }

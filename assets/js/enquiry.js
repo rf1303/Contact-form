@@ -29,7 +29,7 @@ export function enquiryRadio(formValid) {
             return formValid;
         }
 
-        function enquirysClean() {
+export function enquirysClean() {
              const enquirysItem = document.querySelectorAll('.types__items');
              enquirysItem.forEach((e) => {
                  const inputsRadio = e.closest('.types__items');
@@ -38,3 +38,28 @@ export function enquiryRadio(formValid) {
                  /* console.log('enquirysClean', inputsRadio); */
             });
         }
+
+export  function enquirysCheck() {
+            enquirysClean();
+            const queryEnquirys = document.querySelector('input[name="enquirys"]:checked');
+                console.log('queryEnquiry - enquirysCheck 1: ', queryEnquirys);
+            if (queryEnquirys) {
+                console.log('queryEnquiry - enquirysCheck 2');
+                const queryEnquiryCheck = queryEnquirys.closest('.types__items');
+                if (queryEnquiryCheck) {
+                    queryEnquiryCheck.classList.add('types__items--checked'); 
+                }
+            } else {
+                console.log('No hay radio selectetd');
+            }
+        }
+
+export function enquirysChange() {
+    const querysInputs = document.querySelectorAll('.querys__inputs');
+    const queryEnquirys = document.querySelector('input[name="enquirys"]:checked');
+    querysInputs.forEach(radio => {
+        radio.addEventListener('change', enquirysCheck);
+    })
+
+  //TODO:
+}

@@ -1,23 +1,17 @@
 import { wrappersSubmit } from './formSubmit.js';
-import { enquiryRadio } from './enquiry.js';
+import { enquiryRadio, enquirysCheck, enquirysClean } from './enquiry.js';
 /* import { accessKeys } from './access-key.js' */
 import  './access-key.js'; 
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Inicio');
-    /* let formValid = true; */
-    
-   // import('./access-key.js').then(() => {
-   //      console.log('access-key.js cargado');
-   //  }).catch(err => {
-   //      console.error('Error al cargar access-key.js:', err);
-   //  });
-
-    // ...tu lógica principal
-/* }); */
-
     const wrappersForm = document.querySelector('.wrappers__form');
     const messageSuccess = document.querySelector('.message__success');
+    const querysInputs = document.querySelector('input[name="enquirys"]');
+  
+    querysInputs.addEventListener('keydown', enquirysCheck());
+   
+
     wrappersForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
